@@ -55,6 +55,7 @@ https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-
 https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account[added it] to your github account.
 
 Go to **your fork**'s page and get the clone url:
+
 image::pic/gh_clone.png[]
 
 Find a place where you want to keep a copy of the project you'll be working with and **clone** your fork by running
