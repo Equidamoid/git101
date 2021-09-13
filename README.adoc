@@ -80,7 +80,7 @@ There are multiple ways to recover, the most straightforward are:
 
 After you finished some part of the work it's time to save the files(*) to the repository. It's a two-stage project:
 
-===== Staging the changes
+===== Staging the changes ("git add")
 First we need to tell git what we want to be committed ("saved"). You do this by running `git add $filename`, where `$filename` is
 the path to a file you want to commit (== where meaningful changes were made).
 
@@ -99,7 +99,7 @@ Changes not staged for commit:
   (use "git restore <file>..." to discard changes in working directory)
         modified:   README.adoc
 ```
-Here plan to commit `pic/gh_clone.png`, but not `README.adoc`.
+Here I plan to commit `pic/gh_clone.png`, but not `README.adoc`.
 
 If you `git add` 'ed too much, run `git reset` and start over.
 
