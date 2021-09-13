@@ -1,0 +1,71 @@
+== Minimalistic git forking flow
+
+This page summarises the bare minumum of actions needed to create your first pull-request.
+
+I will use git command line api in all the examples.
+Of course you can use whatever tool you want.
+Check the documentation of the tool on how to perform these operations.
+
+== Basics
+
+=== Terminology
+
+* *repository* – a git "database", contains history of your files and some other stuff
+//* local copy – a directory on your local machine containing a `.git`
+//directory, usually created with `git clone` or `git init`.
+* *commit* - single "atomic" change in a repository, together with some metadata (text comment, timestamp, author name, etc.).
+Every commit is identifed by a unique *commit hash* which is usually formatted as a long hex number (like `73001a1f31471fcb2db10fb729e540eb4abd8c3d`).
+* *push* - an action of sending data from your local repository to a remote one
+* *fetch* - inverse of push, getting data from remote repo and adding it to your local one
+* *merge* - an action of combining changes made independently (e.g. when 2 people work on the same project at the same time)
+* *clone* - an action of creating a local repository by making a copy of a remote one
+* *fork* - a "copy" of someone's repository, usually available online
+
+=== Placeholders
+
+In all the examples some ``fake variables'' will be used for bits and pieces that you’ll have to change.
+- REPONAME - name of the original repository (and unless you do something with it, the name of your fork) -
+
+=== git vs github(tm)
+
+Let’s not confuse them. - *git* is a
+https://en.wikipedia.org/wiki/Distributed_version_control[distributed]
+version control tool. - *github* is an online providing storage for your git repositories together with a convenient web gui for viewing them, sharing changes, managing access, etc.
+There are similar services:
+https://gitlab.com[gitlab], https://bitbucket.com[bitbucket] and many others.
+
+=== The process
+
+==== Fork
+
+This is where you take a remote repository and create your own remote repository containing a copy of it
+
+This is only done once
+
+==== Clone your fork
+
+_prerequisite_: set up ssh keys
+
+Now, download your fork with `git clone`.
+
+You only need to do it once, unless you deleted a previous clone or have a reason do have two (you’ll know when it’s the case).
+
+==== Work
+
+Well, change the files, test your changes, etc. etc.
+
+Don’t worry, you won’t break anything.
+
+TODO: if you break something…
+
+==== Commit
+
+After you made something meaningful and want to have a ``checkpoint'', you can tell git to save the current state(*) in a commit
+
+* Tell git which files contain the changes
+
+(*) Technically it’s not the state itself, but the difference from the previous state, but that doesn’t matter now.
+
+This action is repeated, just keep the commits meaningful.
+
+==== Push
