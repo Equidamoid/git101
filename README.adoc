@@ -133,3 +133,8 @@ Make sure you only commit the stuff that has to be committed, like
 ==== Push
 
 After you made one or more commits you can *push* ("upload") them to the remote repository by running `git push`.
+
+==== Pull
+
+After someone else pushed their changes (or you clicked "Fetch upstream" in github UI), run `git pull` to update
+your local repository with the remote changes.
